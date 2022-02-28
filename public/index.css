@@ -1,0 +1,109 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #2F323A;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+h1{
+    color: white;
+    font-size: 48pt;
+}
+
+
+
+/* CHEST STYLING */
+#loot-chest-container{
+    width: 800px;
+    height: 500px;
+    left: 320px;
+    top: 262px;
+    background: #493548;
+}
+/* 4 YELLOW TOP BARS*/
+#long-bar{
+    width: 800px;
+    height: 30px;
+    background: #FFA630;
+}
+.verticle-bar{
+    background: #FFA630;
+    width: 40px;
+    height: 120px;
+}
+.vbar-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
+#vbar1{
+    margin-right: 160px;
+}
+#vbar2{
+    margin-right: 160px;
+}
+#vbar3{
+    margin-right: 160px;
+}
+/* END OF 4 TOP BARS */
+.keyhole-key-wrapper{
+    display: flex;
+}
+
+/* LOCK - BOX */
+.keyhole-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFA630;
+    width: 128px;
+    height: 128px;
+
+    margin-left: 336px;
+    align-items: center;
+    justify-content: center;
+}
+#keyhole-circle{
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: -20px;
+}
+#keyhole-rectangle{
+    background-color: black;
+    width: 36px;
+    height: 63px;
+}
+/* END OF LOCK - BOX */
+
+/* USERNAME AND PASSWORD FIELDS */
+.user-pass-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+#username{
+    margin-right: 128px;
+    font-size: 18pt;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #C4C4C4;
+    color: white;
+}
+#password{
+    font-size: 18pt;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #C4C4C4;
+    color: white;
+}
+
+/* END OF USERNAME AND PASSWORD FIELDS*/
+
+/* END OF CHEST STYLING *//* Rectangle 7 */
+
