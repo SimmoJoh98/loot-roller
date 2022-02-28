@@ -5,13 +5,25 @@ body{
     margin: 0;
     justify-content: center;
     align-items: center;
-    margin-top: 25vh;
+    margin-top: 15vh;
 }
 h1{
     color: white;
     font-size: 48pt;
+    margin-bottom: 10px;
 }
-
+p{
+    color: white;
+    font-size: 18pt;
+}
+a{
+    color: #97B1A6;
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+    color: white;
+}
 
 
 /* CHEST STYLING */
@@ -64,6 +76,8 @@ h1{
     margin-left: 336px;
     align-items: center;
     justify-content: center;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 #keyhole-circle{
     background-color: black;
@@ -76,6 +90,8 @@ h1{
     background-color: black;
     width: 36px;
     height: 63px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 /* END OF LOCK - BOX */
 
@@ -88,11 +104,13 @@ h1{
 #username{
     margin-right: 128px;
     font-size: 18pt;
+    font-weight: medium;
     border-radius: 5px;
     outline: none;
     border: none;
     background-color: #C4C4C4;
-    color: white;
+    color: black;
+    text-align: center;
 }
 #password{
     font-size: 18pt;
@@ -100,10 +118,57 @@ h1{
     outline: none;
     border: none;
     background-color: #C4C4C4;
-    color: white;
+    color: black;
+    text-align: center;
+}
+/* END OF USERNAME AND PASSWORD FIELDS*/
+.key-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -80px;
+    margin-right: 120px;
+}
+#key-outer-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 70px;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+}
+#key-inner-circle:hover{
+    cursor: pointer;
+    background-color: #ffb14a;
+}
+#key-inner-circle{
+    background-color: #FFA630;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+#key-shaft{
+    background-color: #C4C4C4;
+    width: 121px;
+    height: 21px;
+    margin-top: 25px;
+    margin-right: -5px;
+}
+.key-tooth{
+    background-color: #C4C4C4;
+    height: 17px;
+    width: 15px;
+}
+#key-tooth{
+    margin-right: -34px;
+    margin-top: 45px;
+}
+#key-tooth2{
+    margin-right: -15px;
+    margin-top: 45px;
 }
 
-/* END OF USERNAME AND PASSWORD FIELDS*/
-
-/* END OF CHEST STYLING *//* Rectangle 7 */
+/* END OF CHEST STYLING */
 

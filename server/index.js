@@ -9,6 +9,8 @@ app.use(express.json());
 //FRONT END JS AND CSS :^)
 app.use('/js', express.static(path.join(__dirname, '../public/index.js')))
 app.use('/styles', express.static(path.join(__dirname, '../public/index.css')))
+app.use('/signup/js', express.static(path.join(__dirname, '../public/signup/signup.js')))
+app.use('/signup/styles', express.static(path.join(__dirname, '../public/signup/signup.css')))
 //---------------------------------------------//
 
 
@@ -17,7 +19,9 @@ app.use('/styles', express.static(path.join(__dirname, '../public/index.css')))
 app.get('/', (req,res) => {
     res.status(200).sendFile(path.join(__dirname, '../public/index.html'))
 })
-
+app.get('/signup', (req,res) => {
+    res.status(200).sendFile(path.join(__dirname, '../public/signup/signup.html'))
+})
 //PUT - UPDATE ENDPOINTS//
 
 
