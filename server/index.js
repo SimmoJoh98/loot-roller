@@ -31,7 +31,7 @@ app.get('/login', userctrl.login)
 
 
 //POST - CREATE ENDPOINTS//
-app.post('/seed', ctrlr.DBSEED)
+// app.post('/seed', ctrlr.DBSEED)
 app.post('/register', userctrl.register)
 
 //DELETE - ENDPOINTS//
