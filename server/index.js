@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path')
-const ctrlr = require('./controllers/controller.js')
+// const ctrlr = require('./controllers/controller.js') //ONLY FOR SEED FUNCTION
 const userctrl = require('./controllers/user-controller.js')
 require('dotenv').config()
 const PORT = process.env.PORT || 3005
