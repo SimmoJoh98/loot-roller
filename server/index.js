@@ -8,7 +8,7 @@ const port = process.env.PORT || 3005
 
 //MIDDLEWARE-----------------------------------//
 app.use(express.json());
-//FRONT END JS AND CSS :^)
+//FRONT END JS AND CSS FOR LOGIN / SIGNUP :^)
 app.use('/js', express.static(path.join(__dirname, '../public/index.js')))
 app.use('/styles', express.static(path.join(__dirname, '../public/index.css')))
 app.use('/signup/js', express.static(path.join(__dirname, '../public/signup/signup.js')))

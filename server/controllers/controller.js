@@ -9,7 +9,7 @@ const SQL = new Sequelize(process.env.LOOTDB, {
     }
 })
 
-//I know this doesn't have the "drop table if exists", but PgAdmin4 was being weird about it, same with the heroku DB. It was making tables that just couldn't be accessed...
+//I know this doesn't have the "drop table if exists", but PgAdmin4 was being weird about it, same with the herokuDB. It was making tables that just couldn't be accessed...
 module.exports = {
     DBSEED: () => {
         SQL.query(`
