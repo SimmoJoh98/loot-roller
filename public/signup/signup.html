@@ -5,11 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="/signup/styles"/>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
     <title>LootR Registration</title>
 </head>
 <body>
-    <h1>The redirect worked</h1>
+    <h1>Sign Up!</h1>
+
+    <div id="form-container">
+        <form id="signup-form">
+            <input class="username" id="username" type="text" placeholder="username"/>
+            <div class="line-style-1" id="line1"></div>
+            <div class="line-style-1" id="line2"></div>
+            <div class="line-style-1" id="line3"></div>
+            <input class="username" id="password" type="text" placeholder="password"/>
+            <div class="line-style-1" id="line4"></div>
+            <div class="line-style-1" id="line5"></div>
+            <div class="line-style-1" id="line6"></div>
+            <div class="line-style-1" id="line7"></div>
+            
+            <button id="submit-signup">Start Adventure!</button>
+
+            <div id="seal-circle"></div>
+            <div id="tri-rect"></div>
+        </form>
+    </div>
+
 
     <script src="/signup/js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>

@@ -1,4 +1,100 @@
 body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 10%;
     background-color: #2F323A;
     color: white;
+    font-family: 'Exo 2';
+}
+
+#form-container{
+    display: flex;
+    background-color: #D9B26F;
+    height: 800px;
+    width: 500px;
+}
+
+.username{
+    background-color: #C7A367;
+    font-size: 18pt;
+    font-family: 'Exo 2';
+    outline: none;
+    border: none;
+    margin-left: 30px;
+    margin-top: 30px;
+    height: 50px;
+    text-align: center;
+}
+.username:focus{
+    outline: none !important;
+    border: 2px solid #DD614A;
+    
+
+    margin-left: 28px;
+    margin-top: 28px;
+    margin-bottom: -2px;
+}
+
+
+.line-style-1{
+    background-color: #C7A367;
+    height: 50px;
+    width: 370px;
+    margin-left: 30px;
+    margin-top: 18px;
+}
+#line1{
+    width: 440px;
+}
+#line2{
+    width: 325px;
+}
+#line4{
+    width: 210px;
+}
+#line5{
+    width: 400px;
+}
+#line6{
+    width: 320px;
+}
+#line7{
+    width: 440px;
+}
+#submit-signup{
+    width: 170px;
+    height: 50px;
+    background-color: #DD614A;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Exo 2';
+    font-size: 14pt;
+
+    margin-left: 165px;
+    margin-top: 40px;
+}
+#submit-signup:hover{
+    cursor: pointer;
+    background-color: #af4d3c;
+    
+}
+#tri-rect{
+    border-bottom: 50px solid #DD614A;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    margin-left: 55px;
+    margin-top: -20px;
+    width: 0;
+}
+#seal-circle{
+    background-color: #DD614A;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+
+    margin-top: -55px;
+    margin-left: 45px;
 }

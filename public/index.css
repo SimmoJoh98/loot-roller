@@ -112,6 +112,17 @@ a:hover{
     color: black;
     text-align: center;
 }
+#username:focus{
+    outline: none !important;
+    border: 2px solid #FFA630;
+    margin: -2px;
+    margin-right: 128px;
+}
+#password:focus{
+    outline: none !important;
+    border: 2px solid #FFA630;
+    margin: -2px;
+}
 #password{
     font-size: 18pt;
     border-radius: 5px;

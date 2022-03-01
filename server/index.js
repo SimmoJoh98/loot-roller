@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const path = require('path')
+const ctrlr = require('./controllers/controller.js')
+const userctrl = require('./controllers/user-controller.js')
 require('dotenv').config()
 const PORT = process.env.PORT || 3005
 
@@ -22,11 +24,15 @@ app.get('/', (req,res) => {
 app.get('/signup', (req,res) => {
     res.status(200).sendFile(path.join(__dirname, '../public/signup/signup.html'))
 })
+//----------------------------------------------//
+app.get('/login', userctrl.login)
+
 //PUT - UPDATE ENDPOINTS//
 
 
 //POST - CREATE ENDPOINTS//
-
+app.post('/seed', ctrlr.DBSEED)
+app.post('/register', userctrl.register)
 
 //DELETE - ENDPOINTS//
 
