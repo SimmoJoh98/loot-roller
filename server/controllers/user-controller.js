@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize')
 const bcrypt = require('bcryptjs')
 require('dotenv').config()
-let { LOOTDB } = process.env
-const SQL = new Sequelize(LOOTDB, {
+let { DATABASE_URL } = process.env
+const SQL = new Sequelize(DATABASE_URL, {
     dialect: 'postgres',
     dialectOptions: {
         ssl: {
