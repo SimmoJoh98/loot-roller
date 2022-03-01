@@ -4,7 +4,7 @@ const path = require('path')
 // const ctrlr = require('./controllers/controller.js') //ONLY FOR SEED FUNCTION
 const userctrl = require('./controllers/user-controller.js')
 require('dotenv').config()
-const PORT = process.env.PORT || 3005
+const port = process.env.PORT || 3005
 
 //MIDDLEWARE-----------------------------------//
 app.use(express.json());
@@ -36,4 +36,4 @@ app.post('/register', userctrl.register)
 
 //DELETE - ENDPOINTS//
 
-app.listen(PORT, () => console.log(`Listening on ${PORT}`))
+app.listen(port, () => console.log(`Listening on ${port}`))
