@@ -8,7 +8,21 @@ body{
     color: white;
     font-family: 'Exo 2';
 }
+#welcome-msg-container{
+    margin-right: 50px;
+    
 
+}
+#h1-msg{
+    font-size: 48pt;
+    margin-top: -500px;
+}
+#welcome-msg-body{
+    font-size: 18pt;
+}
+#rightword{
+    color: #97B1A6;
+}
 #form-container{
     display: flex;
     background-color: #D9B26F;

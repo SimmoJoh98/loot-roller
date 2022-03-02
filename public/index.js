@@ -24,7 +24,16 @@ async function loginHandler(e){
         }
 
     }
-    console.log(userId)
+
+    if(loggedIn === true){
+        await axios.get(`/home?user_id=${userId}`).then(
+            res => {
+                window.localStorage.setItem('LootR-User', userId)
+                window.location.href = '/home'
+            }
+        )
+    }
+
     e.target.reset()
 }
 

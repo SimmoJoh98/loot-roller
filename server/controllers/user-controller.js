@@ -1,7 +1,9 @@
 const Sequelize = require('sequelize')
 const bcrypt = require('bcryptjs')
+const path = require('path')
 require('dotenv').config()
-let { DATABASE_URL } = process.env
+let { DATABASE_URL } = process.env //USE THIS IMPORT FOR HEROKU DEPLOYMENT!!!
+// let { LCL_DEV } = process.env // USE THIS IMPORT FOR LOCAL DEVELOPMENT!!!
 const SQL = new Sequelize(DATABASE_URL, {
     dialect: 'postgres',
     dialectOptions: {
@@ -48,23 +50,6 @@ module.exports = {
             console.log(err)
             res.status(400).send(err)
         }
-
-
-
-        // if(verified){
-        //     delete userTmp[0].password
-        //     console.log(`Logged in ${userTmp[0].username} with correct password.`)
-        //     res.status(200).send(userTmp)
-        // }
-        // else if(userTmp[0].username === '' || userTmp[0].password === ''){
-        //     res.status(400).send(`Username Or password cannot be empty.`)
-        //     console.log(`Username or Password was left empty, not logging in.`)
-        // }
-        // else{
-        //     res.status(400).send('Incorrect Password')
-        //     console.log(`Incorrect password for ${userTmp[0].username}, not logging in.`)
-        // }
-        
     },
     register: (req,res) => {
         let {username, password} = req.body
@@ -73,7 +58,13 @@ module.exports = {
 
         SQL.query(`
         INSERT INTO users(username,password,isAdmin)
-        VALUES('${username}', '${passHash}', True)
+        VALUES('${username}', '${passHash}', False);
+        
+        INSERT INTO inventory(gold)
+        VALUES(1000);
+
+        UPDATE inventory 
+        SET user_id = inv_id;
         `).then(
             dbRes => {
                 res.status(200).send(`User ${username} created!`)
@@ -82,5 +73,22 @@ module.exports = {
             console.log(err)
             res.status(202).send(err.errors[0].message)
         })
+
+
+    },
+    getHome: (req,res) => {
+         res.status(200).sendFile(path.join(__dirname, '../../public/user-home/home.html'))
+    },
+    getUserInventory: async (req,res) => {
+        let { userId } = req.query
+        await SQL.query(`
+        SELECT * FROM inventory
+        WHERE user_id = ${userId}
+        `).then(
+            dbRes => {
+                res.status(200).send(dbRes[0])
+            }
+        ).catch(err => console.log(err))
+        
     }
 }

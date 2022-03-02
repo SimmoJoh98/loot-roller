@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize')
 require('dotenv').config()
-const SQL = new Sequelize(process.env.LOOTDB, {
+// let { LCL_DEV } = process.env // USE THIS IMPORT FOR LOCAL DEVELOPMENT!!!:
+let { DATABASE_URL } = process.env //USE THIS IMPORT FOR HEROKU DEPLOYMENT!!!: 
+const SQL = new Sequelize(DATABASE_URL, {
     dialect: 'postgres',
     dialectOptions: {
         ssl: {
@@ -27,8 +29,7 @@ module.exports = {
             inv_id serial,
             gold bigint,
             inventory json,
-            user_id serial,
-            item_id int,
+            user_id int,
             CONSTRAINT "inventory_pk" PRIMARY KEY ("inv_id")
         );
         
@@ -51,7 +52,7 @@ module.exports = {
         `).then(
             res => {
                 console.log(`DB seeded successfully`)
-                res.sendStatus(200).send(`It did the thing.`)
+                res.status(200).send(`It did the thing.`)
             }
         ).catch(err => console.log(err))
     }

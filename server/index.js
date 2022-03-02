@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path')
-// const ctrlr = require('./controllers/controller.js') //ONLY FOR SEED FUNCTION
+const ctrlr = require('./controllers/controller.js') //ONLY FOR SEED FUNCTION
 const userctrl = require('./controllers/user-controller.js')
 require('dotenv').config()
 const port = process.env.PORT || 3005
@@ -13,6 +13,9 @@ app.use('/js', express.static(path.join(__dirname, '../public/index.js')))
 app.use('/styles', express.static(path.join(__dirname, '../public/index.css')))
 app.use('/signup/js', express.static(path.join(__dirname, '../public/signup/signup.js')))
 app.use('/signup/styles', express.static(path.join(__dirname, '../public/signup/signup.css')))
+//USER HOME JS AND CSS....//
+app.use('/homejs', express.static(path.join(__dirname, '../public/user-home/home.js')))
+app.use('/homecss', express.static(path.join(__dirname, '../public/user-home/home.css')))
 //---------------------------------------------//
 
 
@@ -26,12 +29,13 @@ app.get('/signup', (req,res) => {
 })
 //----------------------------------------------//
 app.get('/login', userctrl.login)
-
+app.get('/home', userctrl.getHome)
+app.get('/user/inv', userctrl.getUserInventory)
 //PUT - UPDATE ENDPOINTS//
 
 
 //POST - CREATE ENDPOINTS//
-// app.post('/seed', ctrlr.DBSEED)
+app.post('/seed', ctrlr.DBSEED)
 app.post('/register', userctrl.register)
 
 //DELETE - ENDPOINTS//
