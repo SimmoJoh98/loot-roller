@@ -29,6 +29,7 @@ async function loginHandler(e){
         await axios.get(`/home?user_id=${userId}`).then(
             res => {
                 window.localStorage.setItem('LootR-User', userId)
+                window.localStorage.setItem('LootR-Username', username)
                 window.location.href = '/home'
             }
         )

@@ -1,5 +1,140 @@
-.item{
-    width: 400px;
-    height: 400px;
-    background-color: grey;
+body{
+    font-family: 'Exo 2';
+    background-color: #2F323A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+#nav{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #493548;
+    height: 5vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#menu{
+    background-color: #493548;
+    color: #97B1A6;
+    font-size: 18pt;
+    outline: none;
+    border: none;
+}
+#menu:hover{
+    cursor: pointer;
+    color: white;
+}
+#overall-container{
+    display: flex;
+    height: 95vh;
+    width: 100vw;
+    background-color: #2F323A;
+}
+#inv-container{
+    background-color: #D9B26F;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#second-inv-container{
+    background-color: #C7A367;
+    height: 90%;
+    width: 90%;
+}
+#username-gold-container{
+    display: flex;
+}
+/* #gold-total{
+    
+} */
+#gold-icon{
+    background-color: #FFDE30;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-top: 45%;
+    margin-left: 35%;
+}
+#gold-highlight{
+    background-color: white;
+    height: 1%;
+    width: 1%;
+}
+#usernames-inventory{
+    margin-right: 293%;
+    margin-left: -148%;
+}
+/* CHARACTER INV STYLING*/
+#char-container{
+    display: flex;
+    flex-direction: row;
+    background-color: #515151;
+    width: 50vw;
+    justify-content: space-between;
+    
+}
+#char-username-wrapper{
+    display: flex;
+}
+#username-for-equip{
+    margin-left: 8.5vw;
+}
+#user-PFP{
+    background-color: #3A3A3A;
+    height: 50vh;
+    width: 20vw;
+}
+.equip-slot{
+    background-color: #3A3A3A;
+    height: 8vh;
+    width: 4vw;
+}
+#equip-helm{
+    margin-left: 2vw;
+    margin-top: 6vh;
+}
+#equip-misc1{
+    margin-right: 2vw;
+    margin-top: 6vh;
+}
+#equip-shoulders{
+    margin-left: 2vw;
+    margin-top: 2.5vh;
+}
+#equip-misc2{
+    margin-top: 2.5vh;
+}
+#equip-chest{
+    margin-left: 2vw;
+    margin-top: 2.5vh;
+}
+#equip-misc3{
+    margin-top: 2.5vh;
+}
+#equip-legs{
+    margin-left: 2vw;
+    margin-top: 2.5vh;
+}
+#equip-misc4{
+    margin-top: 2.5vh;
+}
+#equip-boots{
+    margin-left: 2vw;
+    margin-top: 2.5vh;
+}
+#equip-misc5{
+    margin-top: 2.5vh;
+}
+#user-stat-breakdown{
+    position: absolute;
+    background-color: #3A3A3A;
+    height: 35vh;    
+    width: 36vw;
+    margin-top: 1vh;
+    margin-left: -8vw;
 }

@@ -4,12 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="/homecss"
+    <link type="text/css" rel="stylesheet" href="/homecss"/>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
     <title>User's Inventory</title>
 </head>
 <body>
-    <h1>HUZZAH IT WORKS</h1>
-    <button id="btn">CLICK FOR INV</button>
+    <nav id="nav">
+        <button id="menu">MENU</button>
+    </nav>
+    
+    <div id="overall-container">
+        <div id="inv-container">
+            <div id="username-gold-container">
+                <h2 ID="usernames-inventory">INVENTORY</h2>
+                <h2 id="gold-total"></h2>
+
+                <div id="goldwrapper">
+                    <div id="gold-icon">
+                        <div id="gold-highlight-wrapper">
+                            <div id="gold-icon-highlight">
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                
+            </div>
+
+
+            <div id="second-inv-container">
+                <!-- I WANT TO DYNAMICALLY POPULATE THE ITEMS IN HERE -->
+            </div>
+        </div>
+
+
+        <div id="char-container">
+
+                <div id="left-column">
+                    
+                    <div class="equip-slot" id="equip-helm">
+
+                    </div>
+                    
+                    <div class="equip-slot" id="equip-shoulders">
+
+                    </div>
+
+                    <div class="equip-slot" id="equip-chest">
+
+                    </div>
+
+                    <div class="equip-slot" id="equip-legs">
+
+                    </div>
+
+                    <div class="equip-slot" id="equip-boots">
+
+                    </div>
+                </div>
+                
+                <div id="middle-column">
+
+                    <div id="char-username-wrapper">
+                        <h1 id="username-for-equip"></h1>
+                    </div>
+
+                    <div id="user-PFP">
+
+                    </div>
+
+                    <div id="user-stat-breakdown">
+                        
+                    </div>
+                </div>
+
+                <div id="right-column">
+
+                    <div class="equip-slot" id="equip-misc1">
+
+                    </div>
+
+                    <div class="equip-slot" id="equip-misc2">
+
+                    </div>
+
+                    <div class="equip-slot" id="equip-misc3">
+
+                    </div>
+
+                    <div class="equip-slot" id="equip-misc4">
+                        
+                    </div>
+
+                    <div class="equip-slot" id="equip-misc5">
+                        
+                    </div>
+                </div>
+            
+        </div>
+            
+
 
     <script src="/homejs"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

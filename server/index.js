@@ -19,7 +19,6 @@ app.use('/homecss', express.static(path.join(__dirname, '../public/user-home/hom
 //---------------------------------------------//
 
 
-
 //GET ENDPOINTS//
 app.get('/', (req,res) => {
     res.status(200).sendFile(path.join(__dirname, '../public/index.html'))
