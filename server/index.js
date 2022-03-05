@@ -31,7 +31,7 @@ app.get('/', (req,res) => {
 app.get('/signup', (req,res) => {
     res.status(200).sendFile(path.join(__dirname, '../public/signup/signup.html'))
 })
-//----------------------------------------------//
+
 app.get('/login', userctrl.login)
 app.get('/home', userctrl.getHome)
 app.get('/user/inv', userctrl.getUserInventory)
