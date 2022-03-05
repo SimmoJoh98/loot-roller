@@ -16,6 +16,11 @@ app.use('/signup/styles', express.static(path.join(__dirname, '../public/signup/
 //USER HOME JS AND CSS....//
 app.use('/homejs', express.static(path.join(__dirname, '../public/user-home/home.js')))
 app.use('/homecss', express.static(path.join(__dirname, '../public/user-home/home.css')))
+//USER ROLLPAGE AND VENDOR//
+app.use('/rollpagejs', express.static(path.join(__dirname, '../public/rollpage/rollpage.js')))
+app.use('/rollpagecss', express.static(path.join(__dirname, '../public/rollpage/rollpage.css')))
+app.use('/vendorjs', express.static(path.join(__dirname, '../public/vendor/vendor.js')))
+app.use('/vendorcss', express.static(path.join(__dirname, '../public/vendor/vendor.css')))
 //---------------------------------------------//
 
 
@@ -30,6 +35,8 @@ app.get('/signup', (req,res) => {
 app.get('/login', userctrl.login)
 app.get('/home', userctrl.getHome)
 app.get('/user/inv', userctrl.getUserInventory)
+app.get(`/rollpage`, userctrl.getRollpage)
+app.get(`/vendor`, userctrl.getVendorPage)
 //PUT - UPDATE ENDPOINTS//
 
 

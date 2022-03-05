@@ -90,5 +90,11 @@ module.exports = {
             }
         ).catch(err => console.log(err))
         
+    },
+    getRollpage: (req,res) => {
+        res.status(200).sendFile(path.join(__dirname ,'../../public/rollpage/rollpage.html'))
+    },
+    getVendorPage: (req,res) => {
+        res.status(200).sendFile(path.join(__dirname ,'../../public/vendor/vendor.html'))
     }
 }

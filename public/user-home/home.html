@@ -9,6 +9,14 @@
     <title>User's Inventory</title>
 </head>
 <body>
+    <div id="menu-modal-container">
+        <div id="modal-sub-container">
+            <button id="close-modal-button">X</button>
+            <button id="log-out" class="menu-buttons" >LOG OUT</button>
+            <button id="roll-page" class="menu-buttons" >LOOT ROLLER</button>
+            <button id="vendor-page" class="menu-buttons" >VENDOR</button>
+        </div>
+    </div>
     <nav id="nav">
         <button id="menu">MENU</button>
     </nav>
@@ -73,7 +81,25 @@
                     </div>
 
                     <div id="user-stat-breakdown">
-                        
+
+                        <div id="stat-wrapper">
+                            <div class="breakdown-stats" id="attackTtl">PATK: </div>
+                            <hr id="stat-divider">
+                            <div class="breakdown-stats" id="defenseTtl">PDEF: </div>
+                            <hr id="stat-divider">
+                            <div class="breakdown-stats" id="matkTtl">MATK: </div>
+                            <hr id="stat-divider">
+                            <div class="breakdown-stats" id="mdefTtl">MDEF: </div>
+                            <hr id="stat-divider">
+                            <div class="breakdown-stats" id="crit-total">CRIT:</div>
+                            <hr id="stat-divider">
+                        </div>
+
+                        <div id="attribute-wrapper">
+
+                            <button id="toggle-breakdown-btn">TOGGLE SKILLS</button>
+                        </div>
+
                     </div>
                 </div>
 

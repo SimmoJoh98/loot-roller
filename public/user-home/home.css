@@ -48,27 +48,24 @@ body{
 }
 #username-gold-container{
     display: flex;
+    width: 90%;
+    justify-content: space-between;
 }
 /* #gold-total{
     
 } */
 #gold-icon{
     background-color: #FFDE30;
-    height: 35px;
-    width: 35px;
+    height: 4vh;
+    width: 4vh;
     border-radius: 50%;
-    margin-top: 45%;
-    margin-left: 35%;
+    margin-top: 10px;
 }
-#gold-highlight{
-    background-color: white;
-    height: 1%;
-    width: 1%;
+#gold-total{
+    margin-left: 35vw;
 }
-#usernames-inventory{
-    margin-right: 293%;
-    margin-left: -148%;
-}
+/* #usernames-inventory{
+} */
 /* CHARACTER INV STYLING*/
 #char-container{
     display: flex;
@@ -80,10 +77,10 @@ body{
 }
 #char-username-wrapper{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#username-for-equip{
-    margin-left: 8.5vw;
-}
+
 #user-PFP{
     background-color: #3A3A3A;
     height: 50vh;
@@ -132,9 +129,102 @@ body{
 }
 #user-stat-breakdown{
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
     background-color: #3A3A3A;
     height: 35vh;    
     width: 36vw;
     margin-top: 1vh;
     margin-left: -8vw;
+}
+#stat-wrapper{
+    height: 100%;
+    width: 50%;
+    outline: 1px solid black;
+    font-size: 18pt;
+}
+#attribute-wrapper{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50%;
+    outline: 1px solid black;
+}
+#stat-divider{
+    background-color: black;
+    border: none;
+    height: 1px;
+}
+
+#toggle-breakdown-btn{
+    background-color: #FFA630;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    padding: .5vw;
+    font-weight: medium;
+}
+#toggle-breakdown-btn:hover{
+    background-color: #ffb14a;
+    cursor: pointer;
+}
+.visible{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgb(0,0,0,.7);
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+}
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+
+#modal-sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #493548;
+    height: 35vh;
+    width: 40vw;
+    border-radius: 4px;
+}
+#close-modal-button{
+    margin-top: -10%;
+    margin-left: 93%;
+    font-size: 18pt;
+    padding: 1vh;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    color: #97B1A6;
+    background-color: rgb(0,0,0,0);
+}
+#close-modal-button:hover{
+    background-color: rgb(0,0,0,0);
+    color: white;
+    cursor: pointer;
+}
+
+.menu-buttons{
+    font-size: 24pt;
+    font-family: 'Exo 2';
+    padding: 2vh;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    color: #97B1A6;
+    background-color: rgb(0,0,0,0);
+    margin-bottom: 5px;
+}
+.menu-buttons:hover{
+    color: white;
+    cursor: pointer;
 }
