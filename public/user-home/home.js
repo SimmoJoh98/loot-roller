@@ -64,6 +64,12 @@ async function getVendorPage(){
     window.location.href = '/vendor'
 }
 
+function logOut(){
+    window.localStorage.removeItem("LootR-User")
+    window.localStorage.removeItem("LootR-Username")
+    window.location.href = '/'
+}
+
 let menuModal = document.getElementById('menu-modal-container')
 menuModal.classList.add('hidden')
 
@@ -77,6 +83,11 @@ let toggleBreakdownBtn = document.getElementById('toggle-breakdown-btn')
 let menuBtn = document.getElementById('menu')
 let userStatBreakdown = document.getElementById('user-stat-breakdown')
 let closeModal = document.getElementById('close-modal-button')
+const logOutBtn = document.getElementById('log-out')
+const rollpageBtn = document.getElementById('roll-page')
+const vendorpageBtn = document.getElementById('vendor-page')
+
+
 
 usernameForEquip.innerText = username
 userInvGTotal.innerText = userData.gold
@@ -84,3 +95,6 @@ userInvGTotal.innerText = userData.gold
 toggleBreakdownBtn.addEventListener('click', toggleBreakdown)
 menuBtn.addEventListener('click', toggleMenu)
 closeModal.addEventListener('click', toggleMenu)
+logOutBtn.addEventListener('click', logOut)
+rollpageBtn.addEventListener('click', getRollPage)
+vendorpageBtn.addEventListener('click', getVendorPage)

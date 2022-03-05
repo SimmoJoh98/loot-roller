@@ -1,0 +1,154 @@
+body{
+    background-color: #2F323A;
+    margin: 0;
+}
+
+h1{
+    color: white;
+    font-size: 48pt;
+    font-family: 'Exo 2';
+}
+
+ul{
+    margin-left: 1.5vw;
+}
+
+#chest-selection-container{
+    display: flex;
+    background-color: #2F323A;
+    justify-content: space-evenly;
+}
+
+.chestp{
+    font-family: 'Exo 2';
+    font-size: 18pt;
+    color: white;
+    margin: 2vw 0 0 2vw;
+    width: 90%;
+    word-wrap: inherit;
+}
+
+#chest1-name{
+    margin: 2vh 0 0 20%;
+}
+#chest2-name{
+    margin: 2vh 0 0 15%;
+}
+#chest3-name{
+    margin: 2vh 0 0 20%;
+}
+
+#loot-box-li{
+    font-family: 'Exo 2';
+    font-size: 18pt;
+    color: white;
+
+}
+
+.chest-columns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3A3A3A;
+    height: 90vh;
+    width: 30vw;
+    margin-top: 2.5vh;
+}
+
+.roll-btn{
+    background-color: #FFA630;
+    padding: 1vh 2vh 1vh 2vh;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Exo 2';
+    font-size: 18pt;
+    margin-left: 40%;
+    margin-top: 70%;
+}
+.roll-btn:hover{
+    background-color: #ffb14a;
+    cursor: pointer;
+}
+
+
+
+
+/* MODAL AND NAV STYLES  */
+.visible{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgb(0,0,0,.7);
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+}
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+
+#modal-sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #493548;
+    height: 35vh;
+    width: 40vw;
+    border-radius: 4px;
+}
+#close-modal-button{
+    margin-top: -10%;
+    margin-left: 93%;
+    font-size: 18pt;
+    padding: 1vh;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    color: #97B1A6;
+    background-color: rgb(0,0,0,0);
+}
+#close-modal-button:hover{
+    background-color: rgb(0,0,0,0);
+    color: white;
+    cursor: pointer;
+}
+
+.menu-buttons{
+    font-size: 24pt;
+    font-family: 'Exo 2';
+    padding: 2vh;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    color: #97B1A6;
+    background-color: rgb(0,0,0,0);
+    margin-bottom: 5px;
+}
+.menu-buttons:hover{
+    color: white;
+    cursor: pointer;
+}
+#nav{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #493548;
+    height: 5vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#menu{
+    background-color: #493548;
+    color: #97B1A6;
+    font-size: 18pt;
+    outline: none;
+    border: none;
+}
+#menu:hover{
+    cursor: pointer;
+    color: white;
+}

@@ -5,11 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="/rollpagecss" />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
     <title>LootR Boxes</title>
 </head>
 <body>
-    <h1>THIS IS THE LOOTBOX PAGE</h1>
+    <div id="menu-modal-container">
+        <div id="modal-sub-container">
+            <button id="close-modal-button">X</button>
+            <button id="log-out" class="menu-buttons" >LOG OUT</button>
+            <button id="inventory" class="menu-buttons" >INVENTORY</button>
+            <button id="vendor-page" class="menu-buttons" >VENDOR</button>
+        </div>
+    </div>
+    <nav id="nav">
+        <button id="menu">MENU</button>
+    </nav>
 
+
+    <div id="chest-selection-container">
+
+        <div class="chest-columns" id="column1">
+            <div class="chest-information-container" id="chest1-info">
+
+                <h1 id="chest1-name">STURDY CHEST</h1>
+                <p id="chest1-p" class="chestp" >
+                    A gift fit for a noble of moderate splendor. Though meager in it's appearance, surely you won't be disappointed with it's contents.
+                </p>
+
+                <ul>
+                    <li id="loot-box-li" >[Basic Enchantment Material x10]</li>
+                    <li id="loot-box-li">[Basic Enchantment Material Crate]</li>
+                    <li id="loot-box-li" >[Minor Socketing Rod x10]</li>
+                    <li id="loot-box-li">[Minor Socketing Crate]</li>
+                    <li id="loot-box-li" >[Meager Gem Box]</li>
+                    <li id="loot-box-li">[Pitiful Gold Pouch]</li>
+                    <li id="loot-box-li">[Meager Gold Pouch]</li>
+                    <li id="loot-box-li">[Grand Gold Pouch]</li>
+
+                    <li id="loot-box-li" >[A Singular Tortilla]</li>
+                </ul>
+
+
+                <button id="column1-roll-btn" class="roll-btn" >ROLL</button>
+            </div>
+        </div>
+
+        <div class="chest-columns" id="column2">
+            <div class="chest-information-container" id="chest2-info">
+
+                <h1 id="chest2-name">GLEAMING CHEST</h1>
+                <p id="chest2-p" class="chestp" >
+                    A grand chest fit for a king. It's contents would impress even the most spoilt and grandiose of kingdoms.
+                </p>
+
+                <ul>
+                    <li>
+
+                    </li>
+                </ul>
+
+                <button id="column2-roll-btn" class="roll-btn" >ROLL</button>
+            </div>
+        </div>
+
+        <div class="chest-columns" id="column3">
+            <div class="chest-information-container" id="chest3-info">
+                
+                <h1 id="chest3-name">RADIANT CHEST</h1>
+                <p id="chest3-p" class="chestp" >
+                    A chest gifted by the gods. Unmatched splendor, and unmatched shine. This chest contains only the most GODLY of loot!
+                </p>
+
+                <ul>
+                    
+                </ul>
+
+                <button id="column3-roll-btn" class="roll-btn" >ROLL</button>
+            </div>
+        </div>
+ 
+    </div>
 
 
     <script src="/rollpagejs"></script>
