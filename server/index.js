@@ -3,6 +3,7 @@ const app = express();
 const path = require('path')
 const ctrlr = require('./controllers/controller.js') //ONLY FOR SEED FUNCTION
 const userctrl = require('./controllers/user-controller.js')
+const invctrlr = require('./controllers/inv-controller.js')
 require('dotenv').config()
 const port = process.env.PORT || 3005
 
@@ -37,13 +38,12 @@ app.get('/home', userctrl.getHome)
 app.get('/user/inv', userctrl.getUserInventory)
 app.get(`/rollpage`, userctrl.getRollpage)
 app.get(`/vendor`, userctrl.getVendorPage)
+app.get('/genloot', invctrlr.genLoot)
 //PUT - UPDATE ENDPOINTS//
-
 
 //POST - CREATE ENDPOINTS//
 app.post('/seed', ctrlr.DBSEED)
 app.post('/register', userctrl.register)
-
 //DELETE - ENDPOINTS//
 
 app.listen(port, () => console.log(`Listening on ${port}`))

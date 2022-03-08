@@ -2,9 +2,9 @@ const Sequelize = require('sequelize')
 const bcrypt = require('bcryptjs')
 const path = require('path')
 require('dotenv').config()
-let { DATABASE_URL } = process.env //USE THIS IMPORT FOR HEROKU DEPLOYMENT!!!
-// let { LCL_DEV } = process.env // USE THIS IMPORT FOR LOCAL DEVELOPMENT!!!
-const SQL = new Sequelize(DATABASE_URL, {
+// let { DATABASE_URL } = process.env //USE THIS IMPORT FOR HEROKU DEPLOYMENT!!!
+let { LCL_DEV } = process.env // USE THIS IMPORT FOR LOCAL DEVELOPMENT!!!
+const SQL = new Sequelize(LCL_DEV, {
     dialect: 'postgres',
     dialectOptions: {
         ssl: {
@@ -63,8 +63,51 @@ module.exports = {
         INSERT INTO inventory(gold)
         VALUES(1000);
 
+        INSERT INTO head_slot(item_id)
+        VALUES(null);
+
+        INSERT INTO shoulder_slot(item_id)
+        VALUES(null);
+
+        INSERT INTO chest_slot(item_id)
+        VALUES(null);
+
+        INSERT INTO leg_slot(item_id)
+        VALUES(null);
+
+        INSERT INTO boot_slot(item_id)
+        VALUES(null);
+        
+        INSERT INTO main_slot(item_id)
+        VALUES(null);
+
+        INSERT INTO off_slot(item_id)
+        VALUES(null);
+
         UPDATE inventory 
         SET user_id = inv_id;
+
+        UPDATE head_slot
+        SET user_id = slot_id;
+
+        UPDATE shoulder_slot
+        SET user_id = slot_id;
+
+        UPDATE chest_slot
+        SET user_id = slot_id;
+
+        UPDATE leg_slot
+        SET user_id = slot_id;
+
+        UPDATE boot_slot
+        SET user_id = slot_id;
+
+        UPDATE main_slot
+        SET user_id = slot_id;
+
+        UPDATE off_slot
+        SET user_id = slot_id;
+
         `).then(
             dbRes => {
                 res.status(200).send(`User ${username} created!`)
