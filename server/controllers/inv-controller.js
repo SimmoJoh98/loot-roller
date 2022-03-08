@@ -4,9 +4,9 @@ const chests = require('../chests/chests.js')
 const chest2 = require(`../chests/chest2.js`)
 const chest3 = require(`../chests/chest3.js`)
 require('dotenv').config()
-// let { DATABASE_URL } = process.env //USE THIS IMPORT FOR HEROKU DEPLOYMENT!!!
-let { LCL_DEV } = process.env // USE THIS IMPORT FOR LOCAL DEVELOPMENT!!!
-const SQL = new Sequelize(LCL_DEV, {
+let { DATABASE_URL } = process.env //USE THIS IMPORT FOR HEROKU DEPLOYMENT!!!
+// let { LCL_DEV } = process.env // USE THIS IMPORT FOR LOCAL DEVELOPMENT!!!
+const SQL = new Sequelize(DATABASE_URL, {
     dialect: 'postgres',
     dialectOptions: {
         ssl: {

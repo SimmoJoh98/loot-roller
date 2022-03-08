@@ -2,9 +2,9 @@ const Sequelize = require('sequelize')
 const bcrypt = require('bcryptjs')
 const path = require('path')
 require('dotenv').config()
-// let { DATABASE_URL } = process.env //USE THIS IMPORT FOR HEROKU DEPLOYMENT!!!
-let { LCL_DEV } = process.env // USE THIS IMPORT FOR LOCAL DEVELOPMENT!!!
-const SQL = new Sequelize(LCL_DEV, {
+let { DATABASE_URL } = process.env //USE THIS IMPORT FOR HEROKU DEPLOYMENT!!!
+// let { LCL_DEV } = process.env // USE THIS IMPORT FOR LOCAL DEVELOPMENT!!!
+const SQL = new Sequelize(DATABASE_URL, {
     dialect: 'postgres',
     dialectOptions: {
         ssl: {
