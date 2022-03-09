@@ -143,5 +143,19 @@ module.exports = {
             
         // }
 
+    },
+    getUserItems: async (req,res) => {
+        let {userId} = req.query
+
+        await SQL.query(`
+        SELECT * 
+        FROM items
+        WHERE user_id = ${userId};
+        `).then(
+            dbRes => {
+                console.log(`retrieved ${dbRes[0]}`)
+                res.status(200).send(dbRes[0])
+            }
+        ).catch(err => console.log(err))
     }
 }

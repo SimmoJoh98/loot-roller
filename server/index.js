@@ -20,8 +20,6 @@ app.use('/homecss', express.static(path.join(__dirname, '../public/user-home/hom
 //USER ROLLPAGE AND VENDOR//
 app.use('/rollpagejs', express.static(path.join(__dirname, '../public/rollpage/rollpage.js')))
 app.use('/rollpagecss', express.static(path.join(__dirname, '../public/rollpage/rollpage.css')))
-app.use('/vendorjs', express.static(path.join(__dirname, '../public/vendor/vendor.js')))
-app.use('/vendorcss', express.static(path.join(__dirname, '../public/vendor/vendor.css')))
 //---------------------------------------------//
 
 
@@ -39,6 +37,7 @@ app.get('/user/inv', userctrl.getUserInventory)
 app.get(`/rollpage`, userctrl.getRollpage)
 app.get(`/vendor`, userctrl.getVendorPage)
 app.get('/genloot', invctrlr.genLoot)
+app.get(`/user/items`, invctrlr.getUserItems)
 //PUT - UPDATE ENDPOINTS//
 
 //POST - CREATE ENDPOINTS//

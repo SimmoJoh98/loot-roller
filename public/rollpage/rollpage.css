@@ -21,7 +21,13 @@ li{
     background-color: #2F323A;
     justify-content: space-evenly;
 }
-
+.chest-information-container{
+    margin-bottom: 50%;
+}
+.chest-columns{
+    display: flex;
+    align-items: center;
+}
 .chestp{
     font-family: 'Exo 2';
     font-size: 18pt;
@@ -66,8 +72,7 @@ li{
     border-radius: 4px;
     font-family: 'Exo 2';
     font-size: 18pt;
-    margin-left: 40%;
-    margin-top: 70%;
+    margin: 5% 0 0 0;
 }
 .roll-btn:hover{
     background-color: #ffb14a;

@@ -66,6 +66,118 @@ body{
 }
 /* #usernames-inventory{
 } */
+/* INNER INVENTORY FOR THE ITEMS STYLES */
+#second-inv-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+.inv-row-placeholder{
+    background-color: #a58855;
+    display: flex;
+    justify-content: space-evenly;
+    height: 8vh;
+    width: 4vw;
+}
+#inv-row1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1vh
+}
+#inv-row2{
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1vh
+}
+#inv-row3{
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1vh
+}
+#inv-row4{
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1vh
+}
+#inv-row5{
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1vh
+}
+#inv-row6{
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1vh
+}
+#inv-row7{
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1vh
+}
+#inv-row8{
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1vh
+}
+#inv-row9{
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1vh
+}
+#inv-row10{
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1vh
+}
+
+
+/* VENDOR MODAL STYLES */
+#vendor-screen-container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    display: flex;
+    background-color: #515151;
+    height: 75vh;
+    width: 55vw;
+}
+#close-vendor-btn{
+    background-color: #515151;
+    font-size: 18pt;
+    font-weight: bold;
+    font-family: 'Exo 2';
+    padding: 1vw;
+    cursor: pointer;
+}
+#close-vendor-btn:hover{
+    background-color: white;
+    cursor: pointer;
+}
+#transaction-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+#your-items{
+    display: flex;
+    background-color: #2F323A;
+    width: 50%;
+    height: 80%;
+}
+#vendor-space{
+    display: flex;
+    background-color: #2F323A;
+    width: 50%;
+    height: 80%;
+}
+
+
+
+
+
+
 /* CHARACTER INV STYLING*/
 #char-container{
     display: flex;
@@ -170,6 +282,12 @@ body{
 #toggle-breakdown-btn:hover{
     background-color: #ffb14a;
     cursor: pointer;
+}
+.viewable{
+    display: flex;
+    flex-direction: row;
+    background-color: #515151;
+    width: 50vw;
 }
 .visible{
     display: flex;
