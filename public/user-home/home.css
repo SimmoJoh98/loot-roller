@@ -6,6 +6,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0;
+    overflow: hidden;
 }
 #nav{
     display: flex;
@@ -133,6 +134,43 @@ body{
     margin-bottom: 1vh
 }
 
+.item-info{
+    position: absolute;
+    background-color: rgb(0,0,0,.8);
+    display: flex;
+    height: 30vh;
+    width: 20vh;
+    z-index: 150;
+    margin-left: 7.1vh;
+    margin-top: -7.5vh;
+    color: white;
+    font-family: 'Exo 2';
+}
+
+.item-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin-left: 2.5vh;
+}
+.fair{
+    color: #00cc30;
+}
+.magical{
+    color: blue;
+}
+.mystic{
+    color: #d934c0;
+}
+.godsent{
+    color: #00ffee;
+}
+.cosmic{
+    color: #ff7017;
+}
+.demonic{
+    color: #cc0000;
+}
 
 /* VENDOR MODAL STYLES */
 #vendor-screen-container{
@@ -144,17 +182,26 @@ body{
     height: 75vh;
     width: 55vw;
 }
+#vendor-close-wrapper{
+    background-color: #2F323A;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
 #close-vendor-btn{
-    background-color: #515151;
-    font-size: 18pt;
+    background-color: #2F323A;
+    font-size: 36pt;
     font-weight: bold;
     font-family: 'Exo 2';
-    padding: 1vw;
     cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 0;
 }
 #close-vendor-btn:hover{
-    background-color: white;
+    color: white;
     cursor: pointer;
+    border-radius: 4px;
 }
 #transaction-wrapper{
     display: flex;
@@ -162,11 +209,17 @@ body{
 }
 #your-items{
     display: flex;
+    justify-content: center;
+    font-size: 18pt;
+    display: flex;
     background-color: #2F323A;
     width: 50%;
     height: 80%;
 }
 #vendor-space{
+    display: flex;
+    justify-content: center;
+    font-size: 18pt;
     display: flex;
     background-color: #2F323A;
     width: 50%;
@@ -182,7 +235,7 @@ body{
 #char-container{
     display: flex;
     flex-direction: row;
-    background-color: #515151;
+    background-color: #2F323A;
     width: 50vw;
     justify-content: space-between;
     
@@ -197,11 +250,14 @@ body{
     background-color: #3A3A3A;
     height: 50vh;
     width: 20vw;
+    box-shadow: 0 1vh 1vh 0 #25272e;
+
 }
 .equip-slot{
     background-color: #3A3A3A;
     height: 8vh;
     width: 4vw;
+    box-shadow: 0 1vh 1vh 0 #25272e;
 }
 #equip-helm{
     margin-left: 2vw;
@@ -250,12 +306,14 @@ body{
     width: 36vw;
     margin-top: 1vh;
     margin-left: -8vw;
+    box-shadow: 0 2vh 1vh 0 #25272e;
+
 }
 #stat-wrapper{
     height: 100%;
     width: 50%;
-    outline: 1px solid black;
     font-size: 18pt;
+    margin: 0 0 -1vh 1vh;
 }
 #attribute-wrapper{
     display: flex;
@@ -263,12 +321,12 @@ body{
     justify-content: flex-end;
     height: 100%;
     width: 50%;
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
 }
 #stat-divider{
     background-color: black;
     border: none;
-    height: 1px;
+    /* height: 1px; */
 }
 
 #toggle-breakdown-btn{

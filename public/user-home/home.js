@@ -52,6 +52,11 @@ async function getInventory(){
         let itmDv = document.createElement('div')
         let itemType = invItems[i].item_props.type
         let rarity = invItems[i].item_props.itemQuality
+        
+        itmDv.addEventListener('mouseenter', toggleItemHover)
+        itmDv.addEventListener('mouseleave', toggleItemHoverOff)
+        // itmDv.addEventListener('dragstart', toggleDragChildren)
+        itmDv.setAttribute('id', `${i}`)
 
         itmDv.style.height = '7.1vh'
         itmDv.style.width = '7.1vh'
@@ -59,7 +64,8 @@ async function getInventory(){
         itmDv.draggable = 'true'
         itmDv.style.backgroundColor = 'grey'
 
-        
+
+
         // // Item qualities are as follows:
         // // fair: green
         // // magical: blue
@@ -67,7 +73,7 @@ async function getInventory(){
         // // godsent: teal / super light blue
         // // cosmic: shiny orange border
         // // demonic: shiny red border
-        switch(itemType === `gear`){
+        switch(itemType !== null){
             case rarity == `fair`:
                 itmDv.style.border = 'solid 2px #00cc30'
                 break;
@@ -87,6 +93,7 @@ async function getInventory(){
                 itmDv.style.border = 'solid 2px #cc0000'
                 break;
         }
+
 
         switch(i !== null){
             case row1.childElementCount <= 6:
@@ -122,7 +129,50 @@ async function getInventory(){
         }
     }
 
+}//END OF GET INVENTORY FUNCTION////////////////////////////////
+
+function toggleItemHover(e){
+    let itm = invItems[e.target.id]
+    let itemInfo = document.createElement('div')
+    let stats = null
+    try {
+        stats = {...itm.item_props.stats}
+    } catch (error) {
+        
+    }
+    e.target.style.cursor = 'pointer'
+    itemInfo.classList.add('item-info')
+    
+    itemInfo.innerHTML = `<div class="item-info-wrapper" >
+        <h2 class="${itm.item_props.itemQuality}">${itm.item_props.itemName}</h2>
+        <h3>${itm.item_props.type}</h3>
+        <p>
+        HP:....${stats.HP}<br/>
+        PATK:....${stats.PATK}<br/>
+        MATK:....${stats.MATK}<br/>
+        PDEF:....${stats.PDEF}<br/>
+        MDEF:....${stats.MDEF}<br/>
+        CRIT:....${stats.CRIT}<br/>
+        DODGE:....${stats.DODGE}<br/>
+        SPEED:....${stats.SPEED}<br/>
+        </p>
+    </div>`;
+
+
+    
+    e.target.appendChild(itemInfo)
 }
+function toggleItemHoverOff(e){
+    let itemInfo = document.querySelector('.item-info')
+    e.target.removeChild(itemInfo)
+}
+
+// function toggleDragChildren(e){
+//     let itemInfo = document.querySelector('item-info')
+//     e.dataTransfer.setData("text/plain", itemInfo)
+
+
+// }
 
 function toggleBreakdown(e){
     if(e.target.innerHTML === `TOGGLE SKILLS`){
