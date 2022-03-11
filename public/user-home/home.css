@@ -207,9 +207,17 @@ body{
     display: flex;
     flex-direction: row;
 }
+#item-list{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 90%;
+    width: 100%;
+}
 #your-items{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     font-size: 18pt;
     display: flex;
     background-color: #2F323A;

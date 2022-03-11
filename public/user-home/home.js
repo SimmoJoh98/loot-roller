@@ -128,7 +128,7 @@ async function getInventory(){
                 break;
         }
     }
-
+    window.localStorage.setItem("gold-balance", userData.gold)
 }//END OF GET INVENTORY FUNCTION////////////////////////////////
 
 function toggleItemHover(e){

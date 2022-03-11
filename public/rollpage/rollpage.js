@@ -68,7 +68,13 @@ let takeBtn3 = document.getElementById('take-loot3')
 
 async function roll1(){
     let chestId = 1
- 
+    let tmpBal = window.localStorage.getItem("gold-balance")
+    if(tmpBal < 100){
+        return alert(`Insufficient Funds...`)
+    }else{
+        let nBal = tmpBal - 100
+        window.localStorage.setItem("gold-balance", nBal)
+    }
     //SELECTS ALL THE ELEMENTS TO BE UPDATED WITH ITEM DATA FROM SERVER
     // let hp = document.getElementById('stat-hp')
     // let PATK = document.getElementById('stat-patk')
@@ -166,8 +172,8 @@ function closeModal3(){
 
 
 column1Roll.addEventListener('click',roll1)
-// column2Roll.addEventListener('click',roll2)
-// column3Roll.addEventListener('click',roll3)
+column2Roll.addEventListener('click',roll1)
+column3Roll.addEventListener('click',roll1)
 takeBtn1.addEventListener('click', closeModal1)
 takeBtn2.addEventListener('click', closeModal2)
 takeBtn3.addEventListener('click', closeModal3)
